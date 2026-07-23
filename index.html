@@ -1,264 +1,327 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ренат — Мнение эксперта</title>
-  <style>
-    /* === ЖЁСТКАЯ ФИКСАЦИЯ СТРАНИЦЫ === */
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 530px;          /* никаких 100%, только 530px */
-      overflow: hidden;       /* ни единого пикселя скролла снаружи */
-    }
+<section class="fd-side-cards-renat">
+  <div class="fd-side-cards-renat__header">
+    <div class="fd-side-cards-renat__label">Мнение эксперта</div>
+    <h2>Сначала отделите оптимизацию от уклонения</h2>
+    <p>Листайте карточки, чтобы узнать, как отвечать собственнику на рискованные налоговые идеи.</p>
+  </div>
 
-    /* body — флекс, чтобы секция заняла всю высоту без зазоров */
-    body {
-      display: flex;
-      align-items: flex-start; /* прижимаем к верху */
-      justify-content: center; /* центрируем по горизонтали */
-    }
+  <input type="radio" name="renat-tabs" id="renat-tab-1" checked>
+  <input type="radio" name="renat-tabs" id="renat-tab-2">
+  <input type="radio" name="renat-tabs" id="renat-tab-3">
 
-    /* === СЕКЦИЯ — РОВНО 530px === */
+  <div class="fd-side-cards-renat__layout">
+    <nav class="fd-side-cards-renat__nav">
+      <label for="renat-tab-1">
+        <span>1</span>
+        <b>Опыт проверки</b>
+      </label>
+
+      <label for="renat-tab-2">
+        <span>2</span>
+        <b>Дробление</b>
+      </label>
+
+      <label for="renat-tab-3">
+        <span>3</span>
+        <b>Деловая цель</b>
+      </label>
+    </nav>
+
+    <div class="fd-side-cards-renat__content">
+      <article class="fd-side-cards-renat__card fd-side-cards-renat__card--1">
+        <h3>Рассказываю о личном опыте</h3>
+
+        <p>
+          Если собственник продолжает настаивать на «сером» варианте, я рассказываю о возможных последствиях.
+          У меня был опыт выездной налоговой проверки в компаниях, где я был соучредителем.
+        </p>
+
+        <p>
+          Первоначальная сумма доначислений была такой, что могла поставить бизнес на грань остановки.
+          Большую часть претензий удалось оспорить, но время, нервы и расходы на защиту никто не вернул.
+          После этого запрос обычно меняется.
+        </p>
+      </article>
+
+      <article class="fd-side-cards-renat__card fd-side-cards-renat__card--2">
+        <h3>Отделяю деловую цель от схемы</h3>
+
+        <p>
+          Часто встречаю запрос на дробление бизнеса. Обычно собственник подает его как «гениальное» решение:
+          открыть несколько ИП, разделить лимиты по выручке. Снаружи это выглядит как налоговая экономия.
+        </p>
+
+        <p>
+          Но я объясняю собственнику, как ФНС выявляет фактическую модель работы.
+          Налоговая, помимо очевидных реквизитов — адреса, сайта и телефонов, — ищет и другие совпадающие признаки:
+          общих сотрудников, клиентскую базу, склады, IP-адреса.
+        </p>
+      </article>
+
+      <article class="fd-side-cards-renat__card fd-side-cards-renat__card--3">
+        <h3>Показываю, где заканчивается оптимизация</h3>
+
+        <p>
+          В судебной практике был случай, когда доказательством дробления стали общие корпоративы:
+          суд счел это признаком единого коллектива.
+        </p>
+
+        <p>
+          Поэтому в ответ на идею дробления я всегда прошу определить деловую цель.
+          Зачем нужна новая компания, кроме снижения налогов: есть ли у нее самостоятельные функции
+          и экономический смысл. Если ответа нет, я предупреждаю об опасности такой модели.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 530px !important;
+    overflow: hidden !important;
+  }
+
+  .fd-side-cards-renat,
+  .fd-side-cards-renat * {
+    box-sizing: border-box !important;
+  }
+
+  .fd-side-cards-renat {
+    width: 100% !important;
+    max-width: 980px !important;
+    height: 530px !important;
+    max-height: 530px !important;
+    margin: 0 auto !important;
+    padding: 24px !important;
+    border: 1px solid #d8bf73 !important;
+    border-radius: 18px !important;
+    background: #f7eddf !important;
+    color: #050505 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .fd-side-cards-renat__header {
+    flex: 0 0 auto !important;
+    margin: 0 0 22px !important;
+    overflow: hidden !important;
+  }
+
+  .fd-side-cards-renat__label {
+    margin: 0 0 10px !important;
+    color: #b38b18 !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+  }
+
+  .fd-side-cards-renat__header h2 {
+    margin: 0 0 10px !important;
+    max-width: 820px !important;
+    color: #050505 !important;
+    font-size: 34px !important;
+    line-height: 1.05 !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  .fd-side-cards-renat__header p {
+    margin: 0 !important;
+    max-width: 760px !important;
+    color: #6b6255 !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 17px !important;
+    line-height: 1.45 !important;
+  }
+
+  .fd-side-cards-renat input {
+    display: none !important;
+  }
+
+  .fd-side-cards-renat__layout {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    display: grid !important;
+    grid-template-columns: 150px minmax(0, 1fr) !important;
+    gap: 14px !important;
+    align-items: stretch !important;
+    overflow: hidden !important;
+  }
+
+  .fd-side-cards-renat__nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .fd-side-cards-renat__nav label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    min-height: 50px !important;
+    padding: 10px !important;
+    border: 1px solid #d8bf73 !important;
+    border-radius: 14px !important;
+    background: #fffaf2 !important;
+    color: #2a2a2a !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.2 !important;
+    cursor: pointer !important;
+    transition: 0.2s ease !important;
+  }
+
+  .fd-side-cards-renat__nav label span {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    background: #b38b18 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+  }
+
+  .fd-side-cards-renat__nav label:hover {
+    border-color: #b38b18 !important;
+  }
+
+  .fd-side-cards-renat__content {
+    height: 100% !important;
+    min-height: 0 !important;
+    border-left: 5px solid #b38b18 !important;
+    border-radius: 18px !important;
+    background: #ffffff !important;
+    overflow: hidden !important;
+  }
+
+  .fd-side-cards-renat__card {
+    display: none !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    padding: 28px 34px 32px !important;
+    background: #ffffff !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #b38b18 #fffaf2 !important;
+  }
+
+  .fd-side-cards-renat__card::-webkit-scrollbar {
+    width: 8px !important;
+  }
+
+  .fd-side-cards-renat__card::-webkit-scrollbar-track {
+    background: #fffaf2 !important;
+    border-radius: 999px !important;
+  }
+
+  .fd-side-cards-renat__card::-webkit-scrollbar-thumb {
+    background: #b38b18 !important;
+    border-radius: 999px !important;
+  }
+
+  .fd-side-cards-renat__card::-webkit-scrollbar-thumb:hover {
+    background: #9f7a12 !important;
+  }
+
+  .fd-side-cards-renat__card h3 {
+    margin: 0 0 16px !important;
+    color: #b38b18 !important;
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+  }
+
+  .fd-side-cards-renat__card p {
+    margin: 0 0 16px !important;
+    color: #050505 !important;
+    font-size: 20px !important;
+    line-height: 1.48 !important;
+  }
+
+  .fd-side-cards-renat__card p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  #renat-tab-1:checked ~ .fd-side-cards-renat__layout .fd-side-cards-renat__card--1,
+  #renat-tab-2:checked ~ .fd-side-cards-renat__layout .fd-side-cards-renat__card--2,
+  #renat-tab-3:checked ~ .fd-side-cards-renat__layout .fd-side-cards-renat__card--3 {
+    display: block !important;
+  }
+
+  #renat-tab-1:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-1"],
+  #renat-tab-2:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-2"],
+  #renat-tab-3:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-3"] {
+    background: #b38b18 !important;
+    color: #ffffff !important;
+    border-color: #b38b18 !important;
+  }
+
+  #renat-tab-1:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-1"] span,
+  #renat-tab-2:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-2"] span,
+  #renat-tab-3:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-3"] span {
+    background: #ffffff !important;
+    color: #b38b18 !important;
+  }
+
+  @media (max-width: 760px) {
     .fd-side-cards-renat {
-      width: 757px;
-      height: 530px;          /* фиксировано, не наследуется */
-      padding: 24px;
-      border: 1px solid #d8bf73;
-      border-radius: 18px;
-      background: #f7eddf;
-      color: #050505;
-      font-family: Georgia, "Times New Roman", serif;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;       /* всё, что не влезло — скрыто, кроме карточек */
-      margin: 0;              /* убираем любые центрирования */
-    }
-
-    .fd-side-cards-renat * {
-      box-sizing: border-box;
+      height: 530px !important;
+      max-height: 530px !important;
+      padding: 18px !important;
     }
 
     .fd-side-cards-renat__header {
-      flex-shrink: 0;
-      margin-bottom: 22px;
-    }
-
-    .fd-side-cards-renat__label {
-      margin-bottom: 10px;
-      color: #b38b18;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      margin-bottom: 14px !important;
     }
 
     .fd-side-cards-renat__header h2 {
-      margin: 0 0 10px;
-      max-width: 820px;
-      color: #050505;
-      font-size: 34px;
-      line-height: 1.05;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .fd-side-cards-renat__header p {
-      margin: 0;
-      color: #6b6255;
-      font-family: Arial, sans-serif;
-      font-size: 17px;
-      line-height: 1.45;
-    }
-
-    .fd-side-cards-renat input {
-      display: none;
+      font-size: 28px !important;
     }
 
     .fd-side-cards-renat__layout {
-      flex: 1 1 0;
-      min-height: 0;
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 14px;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .fd-side-cards-renat__nav {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-self: start;
+      grid-template-columns: 120px minmax(0, 1fr) !important;
+      gap: 10px !important;
     }
 
     .fd-side-cards-renat__nav label {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      min-height: 50px;
-      padding: 10px;
-      border: 1px solid #d8bf73;
-      border-radius: 14px;
-      background: #fffaf2;
-      color: #2a2a2a;
-      font-family: Arial, sans-serif;
-      font-size: 15px;
-      line-height: 1.2;
-      cursor: pointer;
-      transition: 0.2s ease;
+      min-height: 46px !important;
+      padding: 9px !important;
+      font-size: 13px !important;
     }
 
     .fd-side-cards-renat__nav label span {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0 30px;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: #b38b18;
-      color: #ffffff;
-      font-weight: 700;
-    }
-
-    .fd-side-cards-renat__nav label:hover {
-      border-color: #b38b18;
-    }
-
-    .fd-side-cards-renat__content {
-      height: 100%;
-      overflow-y: auto;       /* ← ЕДИНСТВЕННЫЙ СКРОЛЛ */
-      border-left: 5px solid #b38b18;
-      border-radius: 18px;
-      background: #ffffff;
+      flex: 0 0 26px !important;
+      width: 26px !important;
+      height: 26px !important;
     }
 
     .fd-side-cards-renat__card {
-      display: none;
-      padding: 28px 34px 32px;
-      background: #ffffff;
+      padding: 22px 20px 26px !important;
     }
 
     .fd-side-cards-renat__card h3 {
-      margin: 0 0 16px;
-      color: #b38b18;
-      font-size: 28px;
-      line-height: 1.15;
-      font-weight: 700;
+      font-size: 24px !important;
     }
 
     .fd-side-cards-renat__card p {
-      margin: 0 0 16px;
-      color: #050505;
-      font-size: 20px;
-      line-height: 1.48;
+      font-size: 18px !important;
+      line-height: 1.45 !important;
     }
-
-    .fd-side-cards-renat__card p:last-child {
-      margin-bottom: 0;
-    }
-
-    #renat-tab-1:checked ~ .fd-side-cards-renat__layout .fd-side-cards-renat__card--1,
-    #renat-tab-2:checked ~ .fd-side-cards-renat__layout .fd-side-cards-renat__card--2,
-    #renat-tab-3:checked ~ .fd-side-cards-renat__layout .fd-side-cards-renat__card--3 {
-      display: block;
-    }
-
-    #renat-tab-1:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-1"],
-    #renat-tab-2:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-2"],
-    #renat-tab-3:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-3"] {
-      background: #b38b18;
-      color: #ffffff;
-      border-color: #b38b18;
-    }
-
-    #renat-tab-1:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-1"] span,
-    #renat-tab-2:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-2"] span,
-    #renat-tab-3:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-3"] span {
-      background: #ffffff;
-      color: #b38b18;
-    }
-
-    /* Адаптив (только если iframe уже узкий) */
-    @media (max-width: 760px) {
-      html, body {
-        height: auto;
-        overflow: visible;
-      }
-      .fd-side-cards-renat {
-        width: 100%;
-        height: auto;
-        padding: 18px;
-      }
-      .fd-side-cards-renat__layout {
-        display: block;
-        height: auto;
-      }
-      .fd-side-cards-renat__content {
-        height: auto;
-        overflow-y: visible;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <section class="fd-side-cards-renat">
-    <div class="fd-side-cards-renat__header">
-      <div class="fd-side-cards-renat__label">Мнение эксперта</div>
-      <h2>Сначала отделите оптимизацию от уклонения</h2>
-      <p>Листайте карточки, чтобы узнать, как отвечать собственнику на рискованные налоговые идеи.</p>
-    </div>
-
-    <input type="radio" name="renat-tabs" id="renat-tab-1" checked>
-    <input type="radio" name="renat-tabs" id="renat-tab-2">
-    <input type="radio" name="renat-tabs" id="renat-tab-3">
-
-    <div class="fd-side-cards-renat__layout">
-      <nav class="fd-side-cards-renat__nav">
-        <label for="renat-tab-1">
-          <span>1</span>
-          <b>Опыт проверки</b>
-        </label>
-
-        <label for="renat-tab-2">
-          <span>2</span>
-          <b>Дробление</b>
-        </label>
-
-        <label for="renat-tab-3">
-          <span>3</span>
-          <b>Деловая цель</b>
-        </label>
-      </nav>
-
-      <div class="fd-side-cards-renat__content">
-        <article class="fd-side-cards-renat__card fd-side-cards-renat__card--1">
-          <h3>Рассказываю о личном опыте</h3>
-          <p>Если собственник продолжает настаивать на «сером» варианте, я рассказываю о возможных последствиях. У меня был опыт выездной налоговой проверки в компаниях, где я был соучредителем.</p>
-          <p>Первоначальная сумма доначислений была такой, что могла поставить бизнес на грань остановки. Большую часть претензий удалось оспорить, но время, нервы и расходы на защиту никто не вернул. После этого запрос обычно меняется.</p>
-        </article>
-
-        <article class="fd-side-cards-renat__card fd-side-cards-renat__card--2">
-          <h3>Отделяю деловую цель от схемы</h3>
-          <p>Часто встречаю запрос на дробление бизнеса. Обычно собственник подает его как «гениальное» решение: открыть несколько ИП, разделить лимиты по выручке. Снаружи это выглядит как налоговая экономия.</p>
-          <p>Но я объясняю собственнику, как ФНС выявляет фактическую модель работы. Налоговая, помимо очевидных реквизитов — адреса, сайта и телефонов, — ищет и другие совпадающие признаки: общих сотрудников, клиентскую базу, склады, IP-адреса.</p>
-        </article>
-
-        <article class="fd-side-cards-renat__card fd-side-cards-renat__card--3">
-          <h3>Показываю, где заканчивается оптимизация</h3>
-          <p>В судебной практике был случай, когда доказательством дробления стали общие корпоративы: суд счел это признаком единого коллектива.</p>
-          <p>Поэтому в ответ на идею дробления я всегда прошу определить деловую цель. Зачем нужна новая компания, кроме снижения налогов: есть ли у нее самостоятельные функции и экономический смысл.</p>
-          <p>Если ответа нет, я предупреждаю об опасности такой модели.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-</body>
-</html>
+  }
+</style>
