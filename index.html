@@ -1,6 +1,6 @@
 <section class="fd-side-cards-renat">
   <div class="fd-side-cards-renat__header">
-    <div class="fd-side-cards-renat__label">Опыт Рената Акмалова</div>
+    <div class="fd-side-cards-renat__label">Мнение эксперта</div>
     <h2>Сначала отделите оптимизацию от уклонения</h2>
     <p>Листайте карточки, чтобы узнать, как отвечать собственнику на рискованные налоговые идеи.</p>
   </div>
@@ -78,16 +78,21 @@
 
 <style>
   .fd-side-cards-renat {
+    width: 100%;
     max-width: 980px;
-    margin: 40px auto;
-    padding: 24px;
+    height: 530px;
+    max-height: 530px;
+    margin: 0 auto;
+    padding: 22px;
     border: 1px solid #d8bf73;
     border-radius: 18px;
     background: #f7eddf;
     color: #050505;
     font-family: Georgia, "Times New Roman", serif;
     box-sizing: border-box;
-    overflow-x: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   .fd-side-cards-renat * {
@@ -95,11 +100,12 @@
   }
 
   .fd-side-cards-renat__header {
-    margin-bottom: 22px;
+    flex: 0 0 auto;
+    margin-bottom: 18px;
   }
 
   .fd-side-cards-renat__label {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: #b38b18;
     font-family: Arial, sans-serif;
     font-size: 13px;
@@ -109,10 +115,10 @@
   }
 
   .fd-side-cards-renat__header h2 {
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     max-width: 820px;
     color: #050505;
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1.05;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -120,10 +126,11 @@
 
   .fd-side-cards-renat__header p {
     margin: 0;
+    max-width: 760px;
     color: #6b6255;
     font-family: Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.45;
+    font-size: 16px;
+    line-height: 1.35;
   }
 
   .fd-side-cards-renat input {
@@ -131,31 +138,34 @@
   }
 
   .fd-side-cards-renat__layout {
+    flex: 1 1 auto;
+    min-height: 0;
     display: grid;
-    grid-template-columns: 150px minmax(520px, 1fr);
+    grid-template-columns: 135px minmax(0, 1fr);
     gap: 14px;
-    align-items: start;
-    min-width: 720px;
+    align-items: stretch;
   }
 
   .fd-side-cards-renat__nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    min-height: 0;
+    overflow: visible;
   }
 
   .fd-side-cards-renat__nav label {
     display: flex;
     align-items: center;
     gap: 10px;
-    min-height: 50px;
-    padding: 10px;
+    min-height: 46px;
+    padding: 9px 10px;
     border: 1px solid #d8bf73;
     border-radius: 14px;
     background: #fffaf2;
     color: #2a2a2a;
     font-family: Arial, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.2;
     cursor: pointer;
     transition: 0.2s ease;
@@ -165,9 +175,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 30px;
-    width: 30px;
-    height: 30px;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: #b38b18;
     color: #ffffff;
@@ -179,8 +189,8 @@
   }
 
   .fd-side-cards-renat__content {
-    min-height: 360px;
-    max-height: 530px;
+    min-height: 0;
+    height: 100%;
     border-left: 5px solid #b38b18;
     border-radius: 18px;
     background: #ffffff;
@@ -189,8 +199,8 @@
 
   .fd-side-cards-renat__card {
     display: none;
-    max-height: 530px;
-    padding: 28px 34px 32px;
+    height: 100%;
+    padding: 24px 30px 28px;
     background: #ffffff;
     overflow-y: auto;
     overflow-x: hidden;
@@ -217,9 +227,9 @@
   }
 
   .fd-side-cards-renat__card h3 {
-    margin: 0 0 16px;
+    margin: 0 0 14px;
     color: #b38b18;
-    font-size: 28px;
+    font-size: 27px;
     line-height: 1.15;
     font-weight: 700;
   }
@@ -258,35 +268,58 @@
 
   @media (max-width: 760px) {
     .fd-side-cards-renat {
-      padding: 18px;
+      height: 530px;
+      max-height: 530px;
+      padding: 16px;
+    }
+
+    .fd-side-cards-renat__header {
+      margin-bottom: 14px;
+    }
+
+    .fd-side-cards-renat__label {
+      font-size: 12px;
     }
 
     .fd-side-cards-renat__header h2 {
-      font-size: 28px;
+      font-size: 24px;
+      line-height: 1.05;
+    }
+
+    .fd-side-cards-renat__header p {
+      font-size: 14px;
+      line-height: 1.35;
     }
 
     .fd-side-cards-renat__layout {
-      grid-template-columns: 140px 520px;
-      min-width: 680px;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 10px;
     }
 
-    .fd-side-cards-renat__content {
-      max-height: 530px;
+    .fd-side-cards-renat__nav label {
+      min-height: 42px;
+      padding: 8px;
+      font-size: 12px;
+    }
+
+    .fd-side-cards-renat__nav label span {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      font-size: 13px;
     }
 
     .fd-side-cards-renat__card {
-      max-height: 530px;
-      padding: 22px 24px 26px;
-      overflow-y: auto;
-      overflow-x: hidden;
+      padding: 20px 18px 24px;
     }
 
     .fd-side-cards-renat__card h3 {
-      font-size: 24px;
+      font-size: 23px;
     }
 
     .fd-side-cards-renat__card p {
-      font-size: 18px;
+      font-size: 17px;
+      line-height: 1.45;
     }
   }
 </style>
