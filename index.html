@@ -1,6 +1,6 @@
 <section class="fd-side-cards-renat">
   <div class="fd-side-cards-renat__header">
-    <div class="fd-side-cards-renat__label">Мнение эксперта</div>
+    <div class="fd-side-cards-renat__label">Опыт Рената Акмалова</div>
     <h2>Сначала отделите оптимизацию от уклонения</h2>
     <p>Листайте карточки, чтобы узнать, как отвечать собственнику на рискованные налоговые идеи.</p>
   </div>
@@ -71,8 +71,6 @@
           Зачем нужна новая компания, кроме снижения налогов: есть ли у нее самостоятельные функции
           и экономический смысл. Если ответа нет, я предупреждаю об опасности такой модели.
         </p>
-
-       
       </article>
     </div>
   </div>
@@ -182,6 +180,7 @@
 
   .fd-side-cards-renat__content {
     min-height: 360px;
+    max-height: 530px;
     border-left: 5px solid #b38b18;
     border-radius: 18px;
     background: #ffffff;
@@ -190,8 +189,31 @@
 
   .fd-side-cards-renat__card {
     display: none;
+    max-height: 530px;
     padding: 28px 34px 32px;
     background: #ffffff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #b38b18 #fffaf2;
+  }
+
+  .fd-side-cards-renat__card::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .fd-side-cards-renat__card::-webkit-scrollbar-track {
+    background: #fffaf2;
+    border-radius: 999px;
+  }
+
+  .fd-side-cards-renat__card::-webkit-scrollbar-thumb {
+    background: #b38b18;
+    border-radius: 999px;
+  }
+
+  .fd-side-cards-renat__card::-webkit-scrollbar-thumb:hover {
+    background: #9f7a12;
   }
 
   .fd-side-cards-renat__card h3 {
@@ -248,8 +270,15 @@
       min-width: 680px;
     }
 
+    .fd-side-cards-renat__content {
+      max-height: 530px;
+    }
+
     .fd-side-cards-renat__card {
+      max-height: 530px;
       padding: 22px 24px 26px;
+      overflow-y: auto;
+      overflow-x: hidden;
     }
 
     .fd-side-cards-renat__card h3 {
