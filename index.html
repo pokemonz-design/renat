@@ -5,19 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ренат — Мнение эксперта</title>
   <style>
-    /* Страница строго 530px высотой, без скролла */
+    /* === ЖЁСТКАЯ ФИКСАЦИЯ СТРАНИЦЫ === */
     html, body {
       margin: 0;
       padding: 0;
-      height: 530px;          /* фиксируем высоту */
-      overflow: hidden;       /* запрещаем скролл самой страницы */
+      width: 100%;
+      height: 530px;          /* никаких 100%, только 530px */
+      overflow: hidden;       /* ни единого пикселя скролла снаружи */
     }
 
-    /* Корневой блок занимает всю высоту body */
+    /* body — флекс, чтобы секция заняла всю высоту без зазоров */
+    body {
+      display: flex;
+      align-items: flex-start; /* прижимаем к верху */
+      justify-content: center; /* центрируем по горизонтали */
+    }
+
+    /* === СЕКЦИЯ — РОВНО 530px === */
     .fd-side-cards-renat {
       width: 757px;
-      height: 100%;           /* 530px от родителя */
-      margin: 0 auto;
+      height: 530px;          /* фиксировано, не наследуется */
       padding: 24px;
       border: 1px solid #d8bf73;
       border-radius: 18px;
@@ -27,7 +34,8 @@
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      overflow: hidden;       /* скрывает всё, что вылезает за пределы */
+      overflow: hidden;       /* всё, что не влезло — скрыто, кроме карточек */
+      margin: 0;              /* убираем любые центрирования */
     }
 
     .fd-side-cards-renat * {
@@ -35,7 +43,7 @@
     }
 
     .fd-side-cards-renat__header {
-      flex-shrink: 0;         /* шапка не сжимается */
+      flex-shrink: 0;
       margin-bottom: 22px;
     }
 
@@ -71,15 +79,14 @@
       display: none;
     }
 
-    /* Основная область под шапкой — занимает всё оставшееся место */
     .fd-side-cards-renat__layout {
-      flex: 1 1 0;            /* растягивается, но не меньше 0 */
-      min-height: 0;           /* важно для flex-потомка */
+      flex: 1 1 0;
+      min-height: 0;
       display: grid;
       grid-template-columns: 150px 1fr;
       gap: 14px;
       height: 100%;
-      overflow: hidden;        /* лишнее внутри layout не видно */
+      overflow: hidden;
     }
 
     .fd-side-cards-renat__nav {
@@ -123,10 +130,9 @@
       border-color: #b38b18;
     }
 
-    /* Блок с карточками — прокручивается */
     .fd-side-cards-renat__content {
-      height: 100%;           /* занимает всю высоту сетки */
-      overflow-y: auto;       /* ДОЛГОЖДАННЫЙ СКРОЛЛ ТОЛЬКО ЗДЕСЬ */
+      height: 100%;
+      overflow-y: auto;       /* ← ЕДИНСТВЕННЫЙ СКРОЛЛ */
       border-left: 5px solid #b38b18;
       border-radius: 18px;
       background: #ffffff;
@@ -157,14 +163,12 @@
       margin-bottom: 0;
     }
 
-    /* Переключение карточек */
     #renat-tab-1:checked ~ .fd-side-cards-renat__layout .fd-side-cards-renat__card--1,
     #renat-tab-2:checked ~ .fd-side-cards-renat__layout .fd-side-cards-renat__card--2,
     #renat-tab-3:checked ~ .fd-side-cards-renat__layout .fd-side-cards-renat__card--3 {
       display: block;
     }
 
-    /* Активная кнопка */
     #renat-tab-1:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-1"],
     #renat-tab-2:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-2"],
     #renat-tab-3:checked ~ .fd-side-cards-renat__layout label[for="renat-tab-3"] {
@@ -180,25 +184,21 @@
       color: #b38b18;
     }
 
-    /* Адаптив (для экранов меньше 760px) */
+    /* Адаптив (только если iframe уже узкий) */
     @media (max-width: 760px) {
       html, body {
         height: auto;
         overflow: visible;
       }
-
       .fd-side-cards-renat {
         width: 100%;
         height: auto;
         padding: 18px;
-        display: block;
       }
-
       .fd-side-cards-renat__layout {
         display: block;
         height: auto;
       }
-
       .fd-side-cards-renat__content {
         height: auto;
         overflow-y: visible;
